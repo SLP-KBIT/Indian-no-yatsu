@@ -23,7 +23,8 @@ public class BattleController : MonoBehaviour {
 			Instantiate (bossEnemy, v, Quaternion.identity);
 		}
 
-		mainCamera.GetComponent<UnityStandardAssets._2D.CameraFollow> ().maxXAndY.x = map.getGoalX ();
+		mainCamera.GetComponent<UnityStandardAssets._2D.CameraFollow> ().maxXAndY = new Vector2 (100f, 0f);
+		Debug.Log (map.getGoalX ());
 	}
 	
 	// Update is called once per frame
