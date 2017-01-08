@@ -11,7 +11,6 @@ public class HpBarCtrl : MonoBehaviour {
     void Start () {
         // スライダーを取得する
         slider = GetComponent<Slider>();
-        Debug.Log(slider);
         hp = slider.maxValue;
     }
 
