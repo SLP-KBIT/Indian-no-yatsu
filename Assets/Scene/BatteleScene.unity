@@ -312,6 +312,7 @@ MonoBehaviour:
   smallEnemy: {fileID: 1365018779778006, guid: 0e1a77ff4875342caafceaa04e36b17c, type: 2}
   bigEnemy: {fileID: 1776112700721268, guid: 25ffc512212b34742977c5e6bacd0ee9, type: 2}
   bossEnemy: {fileID: 1476793428553528, guid: 62974b9296a1c46bfb20532d208dd2c2, type: 2}
+  map: {fileID: 114626933259573288, guid: d5e787a8c38ee444a8879d3752006b95, type: 2}
 --- !u!4 &1477045419
 Transform:
   m_ObjectHideFlags: 0
