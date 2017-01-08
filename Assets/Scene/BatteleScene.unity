@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 12403337}
   - component: {fileID: 12403336}
   - component: {fileID: 12403335}
+  - component: {fileID: 12403340}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -178,17 +179,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1635377934
+--- !u!114 &12403340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 12403334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9dfad760b6e9455593192a6d869f7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xMargin: 1
+  yMargin: 1
+  xSmooth: 8
+  ySmooth: 8
+  maxXAndY: {x: 0, y: 0}
+  minXAndY: {x: 0, y: 0}
+--- !u!1 &1339276614
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 1635377938}
-  - component: {fileID: 1635377937}
-  - component: {fileID: 1635377935}
-  - component: {fileID: 1635377936}
+  - component: {fileID: 1339276618}
+  - component: {fileID: 1339276617}
+  - component: {fileID: 1339276615}
+  - component: {fileID: 1339276616}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -196,12 +214,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &1635377935
+--- !u!23 &1339276615
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1635377934}
+  m_GameObject: {fileID: 1339276614}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -227,12 +245,12 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!61 &1635377936
+--- !u!61 &1339276616
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1635377934}
+  m_GameObject: {fileID: 1339276614}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -240,26 +258,71 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.99999994, y: 1}
---- !u!33 &1635377937
+  m_Size: {x: 1, y: 1}
+--- !u!33 &1339276617
 MeshFilter:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1635377934}
+  m_GameObject: {fileID: 1339276614}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1635377938
+--- !u!4 &1339276618
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1635377934}
+  m_GameObject: {fileID: 1339276614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: -4.18, z: 0}
-  m_LocalScale: {x: 22.998621, y: 2.2274103, z: 1}
+  m_LocalPosition: {x: 40.43, y: -4.02, z: 0}
+  m_LocalScale: {x: 100, y: 1.8855596, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1477045417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1477045419}
+  - component: {fileID: 1477045418}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: GameController
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1477045418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1477045417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32be67dae249f44d0ba3c07a4af4951a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smallEnemy: {fileID: 1365018779778006, guid: 0e1a77ff4875342caafceaa04e36b17c, type: 2}
+  bigEnemy: {fileID: 1776112700721268, guid: 25ffc512212b34742977c5e6bacd0ee9, type: 2}
+  bossEnemy: {fileID: 1476793428553528, guid: 62974b9296a1c46bfb20532d208dd2c2, type: 2}
+  map: {fileID: 114626933259573288, guid: d5e787a8c38ee444a8879d3752006b95, type: 2}
+  mainCamera: {fileID: 12403334}
+--- !u!4 &1477045419
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1477045417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.9280388, y: 0.20835865, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1789413269
 GameObject:
@@ -270,13 +333,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1789413273}
   - component: {fileID: 1789413272}
-  - component: {fileID: 1789413271}
   - component: {fileID: 1789413270}
   - component: {fileID: 1789413274}
   - component: {fileID: 1789413275}
+  - component: {fileID: 1789413271}
   m_Layer: 0
   m_Name: Indian
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -294,7 +357,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 15.299999, y: 10.479999}
+  m_Size: {x: 9, y: 10}
 --- !u!50 &1789413271
 Rigidbody2D:
   serializedVersion: 4
@@ -361,7 +424,7 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1789413274
 MonoBehaviour:
