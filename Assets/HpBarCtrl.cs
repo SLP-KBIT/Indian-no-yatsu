@@ -10,7 +10,8 @@ public class HpBarCtrl : MonoBehaviour {
     // Use this for initialization
     void Start () {
         // スライダーを取得する
-        slider = GameObject.Find("HpBar").GetComponent<Slider>();
+        slider = GetComponent<Slider>();
+        Debug.Log(slider);
         hp = slider.maxValue;
     }
 
@@ -20,7 +21,7 @@ public class HpBarCtrl : MonoBehaviour {
         hp -= 1;
         if (hp < 0)
         {
-            // 最大を超えたら0に戻す
+            // 最大を超えたらMAXに戻す
             hp = slider.maxValue;
         }
 
