@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	
 	}
 	
 	// Update is called once per frame
@@ -24,9 +23,11 @@ public class Player : MonoBehaviour
 
 		if ( Input.GetKey("left") ) {
 			position.x -= SPEED.x;
+			transform.localRotation = Quaternion.Euler(0, 180, 0);
 		}
 		if ( Input.GetKey("right") ) {
 			position.x += SPEED.x;
+			transform.localRotation = Quaternion.Euler(0, 0, 0);
 		}
 		if ( Input.GetKey("up") ){
 			position.y += SPEED.y;
@@ -37,4 +38,5 @@ public class Player : MonoBehaviour
 
 		transform.position = position;
 	}
+
 }
