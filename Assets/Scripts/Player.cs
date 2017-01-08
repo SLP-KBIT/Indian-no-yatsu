@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
 	void Update ()
 	{
 		anim.SetBool("isSlide", false);
+		anim.SetBool("isJump", false);
 		Move ();
 		Slide ();
 	}
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
 		}
 		if ( Input.GetKey("up") ){
 			position.y += SPEED.y;
+			anim.SetBool("isJump", true);
 		}
 		if ( Input.GetKey("down") ){
 			// position.y -= SPEED.y;
