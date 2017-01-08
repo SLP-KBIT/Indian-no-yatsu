@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 32be67dae249f44d0ba3c07a4af4951a
-timeCreated: 1483878516
+timeCreated: 1483898251
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
@@ -8,6 +8,8 @@ MonoImporter:
   - smallEnemy: {instanceID: 0}
   - bigEnemy: {instanceID: 0}
   - bossEnemy: {instanceID: 0}
+  - map: {fileID: 114626933259573288, guid: d5e787a8c38ee444a8879d3752006b95, type: 2}
+  - mainCamera: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
