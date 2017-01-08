@@ -7,6 +7,7 @@ public class BattleController : MonoBehaviour {
 	public GameObject bigEnemy;
 	public GameObject bossEnemy;
 	public MapBase map;
+	public GameObject mainCamera;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,8 @@ public class BattleController : MonoBehaviour {
 		foreach (Vector2 v in map.getBossEnemies()) {
 			Instantiate (bossEnemy, v, Quaternion.identity);
 		}
+
+		mainCamera.GetComponent<UnityStandardAssets._2D.CameraFollow> ().maxXAndY.x = map.getGoalX ();
 	}
 	
 	// Update is called once per frame

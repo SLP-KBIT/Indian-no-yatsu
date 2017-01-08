@@ -6,6 +6,7 @@ public class Map1 : MapBase {
 	private const float smallY = -1.5f;
 	private const float bigY   = -0.5f;
 	private const float bossY  = 0.5f;
+	private float goalX = 40f;
 
 	private readonly Vector2[] smallEnemies = {
 		new Vector2 (-3f, smallY),
@@ -35,5 +36,10 @@ public class Map1 : MapBase {
 	public override Vector2[] getBossEnemies ()
 	{
 		return bossEnemies;
+	}
+
+	public override float getGoalX ()
+	{
+		return goalX;
 	}
 }
