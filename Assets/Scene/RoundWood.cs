@@ -1,1 +1,0 @@
-﻿using System.Collections;using System.Collections.Generic;using UnityEngine;public class RoundWood : Enemy {    public RoundWood() : base(10000)    {    }}
